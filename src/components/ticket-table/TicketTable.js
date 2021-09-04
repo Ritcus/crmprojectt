@@ -15,6 +15,7 @@ export const TicketTable = ({tickets}) => {
                 </tr>
             </thead>
             <tbody>
+                
              {tickets.length ? ( tickets.map((row) => (
                 <tr key={row.id}>
                     <td>{row.id}</td>
@@ -26,7 +27,7 @@ export const TicketTable = ({tickets}) => {
              ): (
             
                 <tr>
-                    <td colSpan="4" className="text-centre">No tickets to show</td>
+                    <td colSpan="4" className="text-centre">No tickets to show (" ")</td>
                 </tr>
              )}
             </tbody>
