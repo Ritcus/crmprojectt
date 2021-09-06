@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Table } from 'react-bootstrap'
 
+import Proptypes from "prop-types"
+
 
 export const TicketTable = ({tickets}) => {
     return (
@@ -27,11 +29,17 @@ export const TicketTable = ({tickets}) => {
              ): (
             
                 <tr>
-                    <td colSpan="4" className="text-centre">No tickets to show (" ")</td>
+                    <td colSpan="4" className="text-center">   No tickets to show.</td>
                 </tr>
              )}
             </tbody>
             
         </Table>
-    )
+    );
+
+};
+
+
+TicketTable.propTypes = {
+    tickets: Proptypes.array.isRequired,
 }
