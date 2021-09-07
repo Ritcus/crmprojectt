@@ -3,7 +3,29 @@
         "id": 1,
         "subject":"Issue with ssl",
         "status": "Client response pending",
-        "addedAt": "2021-08-29 "
+        "addedAt": "2021-08-29 ",
+        "history":[
+            {
+                "date": "21-04-10",
+                "message": "I lkoasdsad ",
+                "messageBy": "Client"
+            },
+            {
+                "date": "21-04-10",
+                "message": "I lkoasdsad ",
+                "messageBy": "Operator"
+            },
+            {
+                "date": "21-04-10",
+                "message": "I lkoasdsad ",
+                "messageBy": "Client"
+            },
+            {
+                "date": "21-04-10",
+                "message": "I lkoasdsad ",
+                "messageBy": "Operator"
+            }
+        ]
     },
     {
         "id": 2,
