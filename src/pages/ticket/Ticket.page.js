@@ -6,11 +6,24 @@ import { MessageHistory } from '../../message-history/MessageHistory.comp'
 import { UpdateTicket } from '../../update-ticket/UpdateTicket.comp'
 import { useState, useEffect } from 'react'
 
-const ticket =tickets[0]
-export const Ticket = () => {
-    const [message, setMessage] = useState("")
+import { useParams } from 'react-router-dom'
 
-    useEffect(() => {}, [message])
+//const ticket =tickets[0]
+export const Ticket = () => {
+
+    const{tId}= useParams();
+
+    const [message, setMessage] = useState("");
+    const[ticket,setTicket]= useState("");
+
+    useEffect(()=>{
+        for (let i = 0; i < tickets.length; i++) {
+            if(tickets[i].id==tId){
+                setTicket(tickets[i]);
+                continue
+            }
+        } 
+    }, [message,tId]);
 
     const handleOnChange = (e) => {
         setMessage (e.target.value);
@@ -21,7 +34,7 @@ export const Ticket = () => {
     }
     return (
         <Container>
-            <Row>
+            <Row className="mt-5">
                 <Col>
                 <PageBreadcrumb page ="Ticket" />
                 </Col>
@@ -39,7 +52,7 @@ export const Ticket = () => {
             </Row>
             <Row className="mt-4">
                 <Col>
-                <MessageHistory msg={ticket.history} />
+                {ticket.history && <MessageHistory msg={ticket.history} />}
                 </Col>
             </Row>
             <hr />

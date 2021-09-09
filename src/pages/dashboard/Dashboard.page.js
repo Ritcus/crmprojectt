@@ -8,10 +8,12 @@ import tickets from "../../assets/data/dummyTickets.json"
 
 import { PageBreadcrumb } from '../../components/breadcrumb/Breadcrumb.comp'
 
+import { Link } from 'react-router-dom'
+
 export const Dashboard = () => {
     return (
         <Container>
-            <Row>
+            <Row className="mt-5">
                <Col>
                 <PageBreadcrumb page="Dashboard" />
                </Col> 
@@ -19,8 +21,9 @@ export const Dashboard = () => {
 
             <Row>
                 <Col className="text-center mt-5 mb-2">
+                    <Link to= "/addticket">
                     <Button variant="info" style ={{fontSize: "2rem", padding: "10px 30px" }}> Add New Ticket</Button>
-                
+                    </Link>
                 </Col>
             </Row>
 

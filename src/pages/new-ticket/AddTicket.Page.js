@@ -38,7 +38,7 @@ export const AddTicket= () => {
     }
     return (
         <Container>
-            <Row>
+            <Row className="mt-5">
                 <Col>
                     <PageBreadcrumb page="New Ticket" />
                 </Col>

@@ -6,6 +6,8 @@ import { PageBreadcrumb } from '../../components/breadcrumb/Breadcrumb.comp'
 import { SearchForm } from '../../components/search form/SearchForm.comp'
 import { TicketTable } from '../../components/ticket-table/TicketTable'
 
+import { Link } from 'react-router-dom'
+
 import tickets from "../../assets/data/dummyTickets.json"
 export const TicketLists = () => {
 
@@ -27,14 +29,16 @@ export const TicketLists = () => {
     }
     return (
       <Container>
-          <Row>
+          <Row className="mt-5">
               <Col>
               <PageBreadcrumb page= "Ticket Lists" />
               </Col>
           </Row>
           <Row className="mt-4">
               <Col>
+              <Link to ="/addticket">
               <Button variant= "info"> Add New Ticket </Button>
+              </Link>
               </Col>
 
               <Col className="text-right">
